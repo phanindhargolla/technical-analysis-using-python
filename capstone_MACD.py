@@ -12,7 +12,7 @@ import matplotlib.dates as mdates
 
 def app():
 
-    price_data = pd.read_csv('C:\\Users\\Phani\\Downloads\\allOHLCV.csv')
+    price_data = pd.read_csv('.\\allOHLCV.csv')
     price_data_dc = price_data.loc[:, ['Symbol', 'date', 'close']]
 
     def local_css(file_name):
@@ -143,7 +143,7 @@ def app():
         st.pyplot(fig)
 
     brain_data = pd.read_csv(
-        'C:\\Users\\Phani\\Downloads\\updatedBrainBuzz.csv')
+        '.\\updatedBrainBuzz.csv')
     brain_data['CALCULATION_DATE'] = pd.to_datetime(
         brain_data['CALCULATION_DATE'])
 
